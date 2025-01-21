@@ -1,0 +1,11 @@
+CREATE TABLE goods (
+id INT PRIMARY KEY AUTO_INCREMENT, 
+NAME VARCHAR(25)
+);
+
+SELECT COUNT(*) 
+FROM goods;
+
+/*若有設置 SET autocommit=true, 則相較於 DELETE FROM, 使用 TRUNCATE 會自動提交*/
+TRUNCATE TABLE goods;
+

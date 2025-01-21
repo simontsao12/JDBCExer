@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+
+  <named-config name="C3P0"> 
+  	<!-- 獲取連接的四個基本信息 -->
+    <property name="driverClass">com.mysql.cj.jdbc.Driver</property>
+    <property name="jdbcUrl">jdbc:mysql://localhost:3306/test?rewriteBatchedStatements=true</property>
+    <property name="user"></property>
+    <property name="password"></property>
+
+	<!-- 資料庫連接池管理的基本訊息 -->
+	<!-- 當資料庫連接池的連接數不夠時, c3p0一次性向資料庫伺服器申請的連接數 -->
+    <property name="acquireIncrement">5</property>    
+	<!-- c3p0資料庫連接池中初始化時的連接數 -->
+    <property name="initialPoolSize">10</property>
+	<!-- c3p0資料庫連接池維護的最少連接數 -->
+    <property name="minPoolSize">10</property>
+	<!-- c3p0資料庫連接池維護的最多連接數 -->
+    <property name="maxPoolSize">100</property>
+    <!-- c3p0資料庫連接池維護最多的Statement數目 -->
+    <property name="maxStatements">50</property> 
+    <!-- 每個連接中可以最多使用的Statement數目 -->
+    <property name="maxStatementsPerConnection">2</property>
+    
+  </named-config>
+</c3p0-config>
